@@ -1,6 +1,7 @@
 @import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
 
 body{
+   
     height: 768px;
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
 }
@@ -58,16 +59,151 @@ body{
    font-size: 64px;
    line-height: 64px;
    font-weight: 700;
-   text-align: center;
    display: block;
+   text-align: center;
+   padding: 5px;
+   
 
    
 }
-#triangle{
-    width: 254px;
-    height: 287px;
+.path{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
 }
 
+.master-paper{
+    border-radius: 50%;
+    width: 198px;
+    height: 194px;
+    background-color: #4664F4;
+    
+   
+}
+#icon-paper{
+ width: 73px;
+ height: 86px; 
+ margin: 30px 35px 35px 40px;
+ color: #3B4262;
+ transform: rotate(180deg);
+ 
+}
+#paper{
+    border-radius: 50%;
+    width: 152px;
+    height: 144px;
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+    position: absolute;
+    
+}
+.master-oval-paper{
+    border-radius: 50%;
+    width: 198px;
+    height: 203px;
+    background: #2A45C2;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    position: absolute;
+    top: 262px;
+    left: 445px;
+
+}
+.master-scissors{
+    border-radius: 50%;
+    width: 198px;
+    height: 194px;
+    background-color: #EB9F0E;
+   
+ 
+
+}
+#scissors{
+    border-radius: 50%;
+    width: 152px;
+    height: 144px;
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+    position: absolute;  
+    
+}
+#icon-scissors{
+    width: 54px;
+    height: 80px;
+    color: #3B4262;
+    margin: 30px 40px 40px 50px;
+    transform: rotate(180deg);
+    
+}
+.master-oval-scissors{
+  border-radius: 50%;
+  width: 198px;
+  height: 203px;
+  background: #C76C1B;
+  position: absolute;
+  top: 262px;
+  left: 723px;
+}
+#icon-rock{
+    width: 64px;
+    height: 64px;
+    color: #3B4262;
+    transform: rotate(180deg);
+    margin: 35px 45px 45px 45px;
+    
+}
+#rock{
+    border-radius: 50%;
+    width: 152px;
+    height: 144px;
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+   
+}
+.master-oval-rock{
+    border-radius: 50%;
+    width: 198px;
+    height: 203px;
+    background: #9D1634;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    position: absolute;
+    left: 584px;
+    top: 489px;
+   
+}
+
+.master-rock{
+    border-radius: 50%;
+    width: 198px;
+    height: 194px;
+    background-color: #DB2E4D;
+
+}
+#oval{
+    border-radius: 50%;
+    width: 152px;
+    height: 152px;
+    background-color: #BABFD4;
+    transform: rotate(-180deg);
+    position: absolute;
+    margin: 22px 24px 22px 24px;  
+}
+
+#rules{
+    width: 128px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    background: none;
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 19.2px;
+    text-align: center;
+    color: white;
+}
+#btn{
+    margin-top: 100px;
+    float: right;
+    margin-right: 50px;
+}
 
 
 
@@ -75,7 +211,18 @@ body{
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+    margin-top: 170px;
 }
+    
+
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+.master-oval-paper :hover{
+    border-radius: 50%;
+    width: 252px;
+    height: 248px;
+    background: #FFFFFF;
+    opacity: 0.05;
+   
 }
