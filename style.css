@@ -1,5 +1,4 @@
 @import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
-
 body{
    
     height: 768px;
@@ -8,9 +7,11 @@ body{
 .box{
     display: flex;
     justify-content: center;
-    margin: 50px;
-
+    margin-top: 50px;
+    
 }
+
+
 #logo{
     width: 159px;
     height: 96px;
@@ -40,10 +41,9 @@ body{
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
     border-radius: 8px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    
-       
+          
 }
+
 #score{
     color: #2A45C2;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -66,6 +66,7 @@ body{
 
    
 }
+
 .path{
     display: flex;
     justify-content: center;
@@ -93,8 +94,7 @@ body{
     width: 152px;
     height: 144px;
     background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
-    position: absolute;
-    
+   
 }
 .master-oval-paper{
     border-radius: 50%;
@@ -105,8 +105,11 @@ body{
     position: absolute;
     top: 262px;
     left: 445px;
+    
 
 }
+
+   
 .master-scissors{
     border-radius: 50%;
     width: 198px;
@@ -140,6 +143,7 @@ body{
   position: absolute;
   top: 262px;
   left: 723px;
+  cursor: pointer;
 }
 #icon-rock{
     width: 64px;
@@ -185,7 +189,7 @@ body{
     margin: 22px 24px 22px 24px;  
 }
 
-#rules{
+.rules{
     width: 128px;
     height: 40px;
     border: 1px solid #FFFFFF;
@@ -198,8 +202,18 @@ body{
     line-height: 19.2px;
     text-align: center;
     color: white;
+    cursor: pointer;
+
+
 }
-#btn{
+.rules:hover{
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    color: #3B4262;
+
+}
+.btn{
     margin-top: 100px;
     float: right;
     margin-right: 50px;
@@ -217,12 +231,4 @@ body{
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
-}
-.master-oval-paper :hover{
-    border-radius: 50%;
-    width: 252px;
-    height: 248px;
-    background: #FFFFFF;
-    opacity: 0.05;
-   
 }
