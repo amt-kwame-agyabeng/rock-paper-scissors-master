@@ -60,10 +60,6 @@ body{
 
 }
 
-
-
-
-
 .path{
     display: flex;
     justify-content: center;
@@ -103,6 +99,7 @@ body{
     top: 262px;
     left: 445px;
     cursor: pointer;
+    
 
 }
 
@@ -166,8 +163,10 @@ body{
     position: absolute;
     left: 584px;
     top: 489px;
+    cursor: pointer;
    
 }
+
 
 .master-rock{
     border-radius: 50%;
@@ -208,7 +207,7 @@ body{
     border: 1px solid #FFFFFF;
     border-radius: 8px;
     color: #3B4262;
-    content:"";
+    
 
 }
 .btn{
