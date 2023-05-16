@@ -56,8 +56,6 @@ body{
     text-align: center;
     color: #565468;
   
-
-
 }
 
 .path{
@@ -103,14 +101,12 @@ body{
 
 }
 
-   
+ 
 .master-scissors{
     border-radius: 50%;
     width: 198px;
     height: 194px;
     background-color: #EB9F0E;
-   
- 
 
 }
 #scissors{
