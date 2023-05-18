@@ -6,7 +6,6 @@
 }
 
 body{
-   
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
     font-family: 'Barlow Semi Condensed', sans-serif; 
 
@@ -16,7 +15,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
+
+
 #logo{
     margin-left: 30px;
 }
@@ -47,7 +49,7 @@ body{
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.5px;
-    color: #2A45C2;
+    color: hsl(229, 64%, 46%)
 }
 #score-num{
     font-weight: 700;
@@ -63,122 +65,136 @@ body{
     justify-content: center;
     margin-top: 150px;
 }
-
-.master-paper{
-    border-radius: 50%;
-    width: 198px;
-    height: 194px;
-    background-color: #4664F4;
-    
-   
-}
-#icon-paper{
- width: 73px;
- height: 86px; 
- margin: 30px 35px 35px 40px;
- color: #3B4262;
- transform: rotate(180deg);
- 
-}
 #paper{
-    border-radius: 50%;
     width: 152px;
     height: 144px;
-    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
-   
-}
-.master-oval-paper{
     border-radius: 50%;
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+    display: grid;
+    place-items: center;
+    box-shadow: inset  0px 8px 2px #BABFD4;
+}
+
+.paper-oval{
     width: 198px;
-    height: 203px;
+    height: 194px;
+    border-radius: 50%;
+    background: hsl(230, 89%, 62%);
+    display: grid;
+    place-items: center;
+
+}
+.master-paper{
+    width: 198px;
+    height:203px;
     background: #2A45C2;
+    border-radius: 50%;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
     position: absolute;
-    top: 262px;
     left: 445px;
+    top: 262px;
     cursor: pointer;
+
+}
+.master-paper:active{
+
+    animation: animate 4s ease-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05);
+         
+        
+    }
     
-
 }
 
- 
-.master-scissors{
-    border-radius: 50%;
-    width: 198px;
-    height: 194px;
-    background-color: #EB9F0E;
-
-}
 #scissors{
-    border-radius: 50%;
     width: 152px;
     height: 144px;
+    border-radius: 50%;
     background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
-    position: absolute;  
-    
+    display: grid;
+    place-items: center;
+    box-shadow: inset  0px 8px 2px #BABFD4;
 }
-#icon-scissors{
-    width: 54px;
-    height: 80px;
-    color: #3B4262;
-    margin: 30px 40px 40px 50px;
-    transform: rotate(180deg);
-    
+.scissors-oval{
+    width: 198px;
+    height: 194px;
+    border-radius: 50%;
+    background:hsl(39, 89%, 49%);
+    display: grid;
+    place-items: center;
+   
 }
-.master-oval-scissors{
-  border-radius: 50%;
-  width: 198px;
-  height: 203px;
-  background: #C76C1B;
-  position: absolute;
-  top: 262px;
-  left: 723px;
-  cursor: pointer;
+.master-scissors{
+    width: 198px;
+    height:203px;
+    background: hsl(28, 76%, 44%);
+    border-radius: 50%;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    position: absolute;
+    left: 723px;
+    top: 262px;
+    cursor: pointer;
+
+
 }
-#icon-rock{
-    width: 64px;
-    height: 64px;
-    color: #3B4262;
-    transform: rotate(180deg);
-    margin: 35px 45px 45px 45px;
+.master-scissors:active{
+
+    animation: animate 4s ease-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05);
+         
+        
+    }
     
 }
 #rock{
-    border-radius: 50%;
     width: 152px;
     height: 144px;
-    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
-   
-}
-.master-oval-rock{
     border-radius: 50%;
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+    display: grid;
+    place-items: center;
+    box-shadow: inset  0px 8px 2px #BABFD4;
+}
+.rock-oval{
     width: 198px;
-    height: 203px;
+    height: 194px;
+    border-radius: 50%;
+    background: #DB2E4D;
+    display: grid;
+    place-items: center;
+}
+.master-rock{
+    width: 198px;
+    height:203px;
     background: #9D1634;
+    border-radius: 50%;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
     position: absolute;
     left: 584px;
     top: 489px;
     cursor: pointer;
-   
-}
-
-
-.master-rock{
-    border-radius: 50%;
-    width: 198px;
-    height: 194px;
-    background-color: #DB2E4D;
 
 }
-#oval{
-    border-radius: 50%;
-    width: 152px;
-    height: 152px;
-    background-color: #BABFD4;
-    transform: rotate(-180deg);
-    position: absolute;
-    margin: 22px 24px 22px 24px;  
+.master-rock:active{
+
+    animation: animate 4s ease-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05);
+         
+        
+    }
+    
 }
 
 .rules{
