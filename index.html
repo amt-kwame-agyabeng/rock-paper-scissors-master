@@ -10,7 +10,6 @@
 
 </head>
 <body>
-<main>
 <div class="wrapper">
 <div class="container">
 <img id="logo" src="/images/logo.svg" alt="game-logo" >
@@ -20,33 +19,33 @@
 </div>
 </div>
 </div>
-<div class="path">
-<img id="triangle" src="/images/bg-triangle.svg" alt="bg-triangle">
-</div>
+<div class="choice">
+<div class="path"><img id="triangle" src="/images/bg-triangle.svg" alt="bg-triangle"></div>
 <div class="master-paper">
 <div class="paper-oval">
 <div id="paper">
-  <img id="icon-paper" src="/images/icon-paper.svg" alt="Paper" >
+  <img id="icon-paper" src="/images/icon-paper.svg" alt="Paper"  onclick="userPickChoice('paper')">
 </div>
 </div>
 </div>
 <div class="master-scissors">
 <div class="scissors-oval">
 <div id="scissors">
-  <img id="icon-scissors" src="/images/icon-scissors.svg" alt="scissors" >
+  <img id="icon-scissors" src="/images/icon-scissors.svg" alt="scissors"  onclick="userPickChoice('scissors')">
 </div>
 </div>
 </div>
-
 <div class="master-rock">
   <div class="rock-oval">
   <div id="rock-one">
   <div id="rock">
-    <img id="icon-rock" src="/images/icon-rock.svg" alt="rock">
+    <img id="icon-rock" src="/images/icon-rock.svg" alt="rock" onclick="userPickChoice('rock')">
   </div>
   </div>
   </div>
   </div>
+</div>
+
 <div class="btn">
 <button class="rules">RULES</button>
 </div>

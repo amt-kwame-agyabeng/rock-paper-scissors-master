@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
    
 }
 
@@ -242,7 +243,7 @@ body{
 
 }
 .btn{
-    margin-top: 100px;
+    margin-top: 90px;
     margin-right: 50px;
     display: flex;
     justify-content: right;
@@ -254,7 +255,7 @@ body{
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    margin-top: 170px;
+    margin-top: 70px;
 }
     
 
