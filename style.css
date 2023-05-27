@@ -270,14 +270,19 @@ body{
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
 }
 .contest {
-    display:flex;
+    display:none;
     flex-direction: row;
     place-content: center;
-    margin-top: 50px;
-    gap: 150px;
+    margin-top: 70px;
+    gap: 60px;
+    text-align: center;   
+    
+}
+.ref{
+    position: relative;
+    top: 100px;
     text-align: center;
-    
-    
+   
 }
 
 
@@ -296,6 +301,7 @@ body{
     font-weight: 700;
     font-size: 24px;
     color: #FFFFFF;
+    margin-bottom: 40px;
     
       
 }
@@ -303,14 +309,15 @@ body{
     font-weight: 700;
     font-size: 24px;
     color: #FFFFFF;
+    margin-bottom: 40px;
 }
 #win{
     font-weight: 700;
     font-size: 56px;
     line-height: 67px;
-    text-align: center;
     color: #FFFFFF;
 }
+
 #play{
     width: 220px;
     height: 48px;
@@ -321,6 +328,7 @@ body{
     line-height: 19px;
     letter-spacing: 2.5px;
     color: #3B4262;
+    margin-top: 10px;
 
 }
 
@@ -346,6 +354,7 @@ body{
     width: 311px;
     height: 96px;
     border-radius: 5px;
+    margin-top: 30px;
    }
 .scoreboard{
     width: 80px;
@@ -457,27 +466,29 @@ body{
     
 }
 #house-pick{
-    font-size: 15px;
+    font-size:  15px;
     font-weight: 700;
     letter-spacing: 1.88px;
     position: absolute;
     top: 350px;
     text-align: center;
     
-    }
+}
 
-    .contest{
-        
-        gap:60px;
-    }
-    .ref{
-        position: absolute;
-        top: 420px;
+.contest{    
+    gap:60px;
+    margin-top: 70px;
+}
+.ref{
+    position: absolute;
+    top: 440px;
 
-    }
+}
     
     .btn{
-        margin-top: 250px;
+        position: relative;
+        top: 190px;
+        
     }
 }
 
