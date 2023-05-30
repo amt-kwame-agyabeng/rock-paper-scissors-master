@@ -19,8 +19,8 @@
 </div>
 </div>
 </div>
+<div class="game-container">
 <div class="choice">
-<div class="path"><img id="triangle" src="/images/bg-triangle.svg" alt="bg-triangle"></div>
 <div class="master-paper">
 <div class="paper-oval">
 <div id="paper">
@@ -37,17 +37,16 @@
 </div>
 <div class="master-rock">
   <div class="rock-oval">
-  <div id="rock-one">
   <div id="rock">
     <img id="icon-rock" src="/images/icon-rock.svg" alt="rock" onclick="userPickChoice('rock')">
   </div>
   </div>
   </div>
-  </div>
+</div>
 </div>
 <div class="contest">
-  <div class="userpick">
-  <p id="pick">YOU PICKED</p>
+  <div class="userPick">
+  <p id="pi">YOU PICKED</p>
   <div class="scissors-copy">
   <div class="scissors-oval">
   <div id="scissors">
@@ -58,9 +57,9 @@
 </div>
 <div class="ref">
 <p id="win">YOU WIN</p>
-<button id="play">PLAY AGAIN</button>
+<button id="play" onclick="newGame()">PLAY AGAIN</button>
 </div>
-<div class="cp">
+<div class="housepick">
 <p id="house-pick">THE HOUSE PICKED</p>
 <div class="circle"></div>
 </div>
@@ -68,15 +67,11 @@
 
 
 
-<div class="btn">
-<button class="rules">RULES</button>
-</div>
-
 <div class="attribution">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   Coded by <a href="#">Agyabeng Kwame Aboagye</a>.
 
 </div> 
-</main>
+
 </body>
 </html>
