@@ -21,57 +21,68 @@
 </div>
 <div class="game-container">
 <div class="choice">
-<div class="master-paper">
+<div class="master-paper" >
 <div class="paper-oval">
 <div id="paper">
-  <img id="icon-paper" src="/images/icon-paper.svg" alt="Paper"  onclick="userPickChoice('paper')">
+  <img id="icon-paper" src="/images/icon-paper.svg" alt="Paper">
 </div>
 </div>
 </div>
 <div class="master-scissors">
 <div class="scissors-oval">
 <div id="scissors">
-  <img id="icon-scissors" src="/images/icon-scissors.svg" alt="scissors"  onclick="userPickChoice('scissors')">
+  <img id="icon-scissors" src="/images/icon-scissors.svg" alt="scissors">
 </div>
 </div>
 </div>
-<div class="master-rock">
+
+
+<div class="master-rock" >
   <div class="rock-oval">
   <div id="rock">
-    <img id="icon-rock" src="/images/icon-rock.svg" alt="rock" onclick="userPickChoice('rock')">
+    <img id="icon-rock" src="/images/icon-rock.svg" alt="rock">
   </div>
   </div>
   </div>
 </div>
 </div>
-<div class="contest">
-  <div class="userPick">
-  <p id="pi">YOU PICKED</p>
-  <div class="scissors-copy">
-  <div class="scissors-oval">
-  <div id="scissors">
-  <img id ="icon-scissors" src="/images/icon-scissors.svg" alt="icon-scissors">
-</div>
-</div>
-</div>
-</div>
-<div class="ref">
-<p id="win">YOU WIN</p>
-<button id="play" onclick="newGame()">PLAY AGAIN</button>
-</div>
-<div class="housepick">
-<p id="house-pick">THE HOUSE PICKED</p>
-<div class="circle"></div>
-</div>
+
+
+
+<div class="game">
+<h2 class="game_heading">YOU PICKED</h2>
+<h2 class="game_heading">THE HOUSE PICKED</h2>
+<div class="pick"></div>
+<div class="pick"></div>
 </div>
 
 
 
-<div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">Agyabeng Kwame Aboagye</a>.
 
-</div> 
+ 
+ 
+<div class="btn">
+<button type="button" class="rules">RULES</button>
+</div>
+<div class="modal">
+  <div class="modal-container">
+  <header class="modal_header">
+    <h2>RULES</h2>
+    <button class="close-button">
+      <img src="/images/icon-close.svg" alt="icon-close">
+    </button>
+  </header>
+  <img class="image-rules" src="/images/image-rules.svg" alt="image-rules">
+
+  </div>
+</div>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Agyabeng Kwame Aboagye</a>.
+  
+  </div>
+</footer>
 
 </body>
 </html>
