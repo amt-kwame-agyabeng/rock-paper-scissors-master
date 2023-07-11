@@ -42,14 +42,15 @@ const gamePick = document.querySelectorAll('.game_pick')
         setTimeout(() => {
             gameDiv.innerHTML = `
             <div class = "choice ${results[idx].name}">
-            <img src = images/icon-${results[idx].name}.svg" alt = ${results[idx].name}"/>
+            <img src = "images/icon-${results[idx].name}.svg" >
             </div>
             `
 
 
-        }, idx*1000)
+        }, idx*2000)
 
-    })
+    });
+
 
  }
 
