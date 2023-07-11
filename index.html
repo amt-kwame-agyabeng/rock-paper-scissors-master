@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="app.js"></script>
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-  
+ 
 </head>
 <body>
 <div class="wrapper">
@@ -19,41 +18,25 @@
 </div>
 </div>
 </div>
-<div class="game-container">
-<div class="choice">
-<div class="paper" >
-<div class="oval-paper">
-<div id="oval">
-  <img id="icon-paper" src="/images/icon-paper.svg" alt="Paper">
+<div class="game-box">
+<section class="userchoice">
+<button class="pick-btn" data-choice="paper">
+<div class="choice paper"><img src="/images/icon-paper.svg" alt="paper" ></div>
+</button>
+<button class="pick-btn" data-choice="scissors">
+<div class="choice scissors"><img src="/images/icon-scissors.svg" alt=""rock></div>
+</button>
+<button class="pick-btn" data-choice="rock">
+<div class="choice rock"><img src="/images/icon-rock.svg" alt="scissors"></div>
+</button>
+</section>
 </div>
-</div>
-</div>
-<div class="scissors">
-<div class="scissors-oval">
-<div id="oval">
-  <img id="icon-scissors" src="/images/icon-scissors.svg" alt="scissors">
-</div>
-</div>
-</div>
-<div class="rock">
-  <div class="rock-oval">
-  <div id="oval">
-    <img id="icon-rock" src="/images/icon-rock.svg" alt="rock">
-  </div>
-  </div>
-  </div>
-</div>
-</div>
-<div class="game"> 
-  <div id="user-choice">
+<div class="game">
   <h2 class="game_heading">YOU PICKED</h2>
-  <div class="pick"></div>
-</div>
-  <div id="computer-choice" >
   <h2 class="game_heading">THE HOUSE PICKED</h2>
-  <div class="pick"></div>
-  </div>
- 
+  <div class="game_pick"></div>
+  <div class="game_pick"></div>
+  
   </div>
 <div class="btn">
 <button class="rulesBtn">RULES</button>
@@ -74,6 +57,6 @@
   
   </div>
 </footer>
-
+<script src="app.js"></script>
 </body>
 </html>
