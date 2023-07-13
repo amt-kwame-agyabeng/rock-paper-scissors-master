@@ -13,27 +13,33 @@ const choices =[
     },
 ]
 const choiceButtons = document.querySelectorAll('.pick-btn');
-const choiceDiv = document.querySelector('.choice')
+const choiceDiv = document.querySelector('.player-choice')
 const gameDiv = document.querySelector('.game')
 const gamePick = document.querySelectorAll('.game_pick')
+
+const gameWinner = document.querySelector('.game_winner')
+const gameWinnerText = document.querySelector('.game_text')
+
+
 
  //game logic
  choiceButtons.forEach(button =>{
     button.addEventListener('click',() => {
         const choiceName = button.dataset.choice;
-        const choice = choices.find(choice => choice.name === choiceName)
+        const choice = choices.find(choice => choice.name === choiceName);
         choose(choice)
 
-    })
- }) 
+    });
+ });
  
  function choose(choice){
-    const computerChoice = computerChoose()
-    displayResults([choice,computerChoice])
-
+    const computerChoice = computerChoose();
+    displayResults([choice,computerChoice]);
+    displayWinner([choice,computerChoice]);
  }
+
  function computerChoose(){
-    const rand = Math.floor(Math.random()* choices.length)
+    const rand = Math.floor(Math.random()* choices.length);
     return choices[rand]
  }
 
@@ -47,22 +53,43 @@ const gamePick = document.querySelectorAll('.game_pick')
             `
 
 
-        }, idx*2000)
-
+        }, idx*1000)
+    
     });
-
-
+    
+    choiceDiv.classList.toggle('hidden');
+    gameDiv.classList.toggle('hidden');
  }
+ 
+function displayWinner(results){
+    setTimeout(() => {
+       const userWins = isWinner(results) 
+       const computerWins = isWinner(results.reverse())
+       if (userWins) {
+        gameWinnerText.innerText ="YOU WIN"
+        
+       }else if(computerWins){
+        gameWinnerText.innerText ="YOU LOSE"
+       
+        
+       }else{
+        gameWinnerText.innerText ="DRAW"
+       }
 
-  
+       gameWinner.classList.toggle('hidden');
+       gameDiv.classList.toogle('show-winner');
+       
+
+    },5000);
 
     
-   
-    
+}
 
-    
-    
-    
+function isWinner(results) {
+    return results[0].beats === results[1].name;
+  }
+
+
     
     
     const modal = document.querySelector(".modal");
@@ -76,6 +103,8 @@ const gamePick = document.querySelectorAll('.game_pick')
     
     rules.addEventListener("click", toggleModal);
     closeButton.addEventListener("click", toggleModal);
+
+
   
 
 

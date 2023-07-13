@@ -19,7 +19,7 @@
 </div>
 </div>
 <div class="game-box">
-<section class="userchoice">
+<section class="player-choice">
 <button class="pick-btn" data-choice="paper">
 <div class="choice paper"><img src="/images/icon-paper.svg" alt="paper" ></div>
 </button>
@@ -31,13 +31,24 @@
 </button>
 </section>
 </div>
-<div class="game">
+<div class="game hidden">
+  <div class="user-pick">
   <h2 class="game_heading">YOU PICKED</h2>
-  <h2 class="game_heading">THE HOUSE PICKED</h2>
+  <div class="pick-con">
   <div class="game_pick"></div>
-  <div class="game_pick"></div>
-  
+</div>
+</div>
+  <div class="game_winner hidden">
+   <h2 class="game_text"></h2>
+    <button class="play-again">PLAY AGAIN</button>
   </div>
+  <div class="computer-pick">
+  <h2 class="game_heading">THE HOUSE PICKED</h2>
+  <div class="pick-con">
+  <div class="game_pick"></div>
+ </div>
+</div>
+ </div> 
 <div class="btn">
 <button class="rulesBtn">RULES</button>
 </div>

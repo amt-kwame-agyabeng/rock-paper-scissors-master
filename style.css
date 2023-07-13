@@ -10,7 +10,8 @@
 body{ 
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
     font-family: 'Barlow Semi Condensed', sans-serif; 
-    min-height: 120vh;
+    min-height: 100vh;
+    
 
 
 }
@@ -65,7 +66,7 @@ body{
     display: flex;
     justify-content: center;
 }
-.userchoice{
+.player-choice{
     background: url('/images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -78,7 +79,7 @@ body{
     grid-template-areas: 
     "paper scissors"
     "rock rock";
-    margin-top: 50px;
+    margin-top: 60px;
     gap: 40px;
     
 
@@ -146,6 +147,7 @@ body{
 }
 
 
+
 .pick-btn{
     border: none;
     background: none;
@@ -195,44 +197,72 @@ body{
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+    bottom: 0;
 }
 .game{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "you-title computer-title"
-    "you-picked computer-picked";
-    place-items: center;
-    max-width: 900px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    
 }
-.game_heading:first-of-type{
-    grid-area: you-title;
-}
-.game_heading:last-of-type{
-    grid-area: computer-title;
-}
-.game_pick:first-of-type{
-    grid-area: you-picked;
-}
-.game_pick:last-of-type{
-    grid-area: computer-picked;
-}
+
+
 .game_heading{
-    font-weight: 700;
     font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 3px;
+    font-style: normal;
+    font-weight: 700;
     color: #FFFFFF;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
    
 }
+.game.pick-con{
+    display: flex;
+    justify-content: center;
+}
+
+.game_winner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+  
 .game_pick{
     width: 200px;
     height: 200px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    margin-top: 30px;
+     
 }
+.game_text{
+    color: #FFF;
+    text-align: center;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+
+
+}
+.play-again{
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+    border-style: none;
+    color: #3B4262;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.5px;
+    
+}
+
+
+
+
 .modal {
     position: fixed;
     left: 0;
@@ -274,6 +304,12 @@ body{
     visibility: visible;
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+.hidden{
+    display: none;
+}
+
+
+
 
 
 
@@ -319,67 +355,43 @@ body{
     line-height: 40px;
     text-align: center
 }
-.choice{
+.player-choice{
     width: 312px;
     height: 281px;
     background-size: 166px 187px;
-   
+    gap: 20px;
 }
-      
-.paper{
+.choice img{
+    width: 48px;
+    height: 56px;
+    
+
+}
+.choice::before{
+    width: 100px;
+    height: 100px;
+} 
+.choice.paper{
     width: 130px;
     height: 133px;
 }
-.oval-paper{
-    width: 129px;
-    height: 126px;
-}
-#oval{
-    width: 99px;
-    height: 94px;
-
-}
-#icon-paper{
-    width: unset;
-    height: unset;
-}
-.scissors{
-    width: 130px;
-    height: 133px;
-    margin-left: 40px;
-}
-.scissors-oval{
-    width: 129px;
-    height: 126px;
-}
-
-#icon-scissors{
-    width: unset;
-    height: unset;
-}
-.rock{
+.choice.scissors{
     width: 130px;
     height: 133px;
 }
-.rock-oval{
-    width: 129px;
-    height: 126px
-
+.choice.rock{
+    width: 130px;
+    height: 133px;
 }
-
-#icon-rock{
-    width: unset;
-    height: unset;
-}
-
-      
 
 
 .btn{
     display: flex;
     justify-content: center;
-    margin-right: unset;
- 
+    position: absolute;
+    bottom: 30px;
+    place-items: center;
+   
 }
 .modal-content{
     width: 100%;
@@ -394,6 +406,22 @@ body{
     margin-top: 70px;  
     margin-bottom: 50px;
    
+  
+}
+
+.game_pick{
+    width: 110px;
+    height: 110px;
+}
+.game_heading{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+.game_winner{
+   position: absolute;
+   top:350px;
 }
 
 .close-button{
@@ -405,24 +433,6 @@ body{
 footer{
     display: none;
 }
-.game{
-    max-width: fit-content;
-}
-.game h2{
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 32px;
-    text-align: center;
-    letter-spacing: 1.875px;
-}
-
-.pick{
-    width: 110px;
-    height: 110px;
-}
-
-
-
 
 }
 
