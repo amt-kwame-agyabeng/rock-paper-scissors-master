@@ -227,7 +227,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 90px;
 }
   
 .game_pick{
@@ -257,6 +257,7 @@ body{
     font-weight: 600;
     line-height: normal;
     letter-spacing: 2.5px;
+    margin-top: 5px;
     
 }
 
@@ -386,11 +387,14 @@ body{
 
 
 .btn{
-    display: flex;
     justify-content: center;
     position: absolute;
     bottom: 30px;
-    place-items: center;
+    width: 100%;
+    margin: auto;
+
+    
+    
    
 }
 .modal-content{
@@ -406,18 +410,26 @@ body{
     margin-top: 70px;  
     margin-bottom: 50px;
    
-  
+ 
 }
 
 .game_pick{
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
+    margin-left: 10px;
+   
+    
 }
 .game_heading{
     font-size: 15px;
     font-weight: 700;
     line-height: 32px;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 200px;
+   
+    
+
 }
 .game_winner{
    position: absolute;
@@ -442,9 +454,4 @@ footer{
 
 
 
-/*media query for tablets*/
-@media screen and (min-width:768px) and (max-width:1024px){
-
- 
-}
 
