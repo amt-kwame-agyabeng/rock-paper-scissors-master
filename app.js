@@ -22,7 +22,7 @@ const gameWinnerText = document.querySelector('.game_text')
 const scoreNum = document.querySelector('#score-num')
 
 let score = 0;
-localStorage.setItem('score',score.toString());
+
 
 
 
@@ -57,7 +57,7 @@ localStorage.setItem('score',score.toString());
             `
 
 
-        }, idx*1000)
+        }, idx*3000)
     
     });
     
