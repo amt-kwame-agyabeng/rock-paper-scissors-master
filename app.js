@@ -12,13 +12,17 @@ const choices =[
         beats: "scissors"
     },
 ]
-const choiceButtons = document.querySelectorAll('.pick-btn');
+const choiceButtons = document.querySelectorAll('.pick-btn')
 const choiceDiv = document.querySelector('.player-choice')
-const gameDiv = document.querySelector('.game')
+const game = document.querySelector('.game')
 const gamePick = document.querySelectorAll('.game_pick')
 
 const gameWinner = document.querySelector('.game_winner')
 const gameWinnerText = document.querySelector('.game_text')
+const scoreNum = document.querySelector('#score-num')
+
+let score = 0;
+localStorage.setItem('score',score.toString());
 
 
 
@@ -58,7 +62,7 @@ const gameWinnerText = document.querySelector('.game_text')
     });
     
     choiceDiv.classList.toggle('hidden');
-    gameDiv.classList.toggle('hidden');
+    game.classList.toggle('hidden');
  }
  
 function displayWinner(results){
@@ -67,27 +71,34 @@ function displayWinner(results){
        const computerWins = isWinner(results.reverse())
        if (userWins) {
         gameWinnerText.innerText ="YOU WIN"
-        
+        updateScore(1)
        }else if(computerWins){
         gameWinnerText.innerText ="YOU LOSE"
-       
+       updateScore(-1)
         
        }else{
         gameWinnerText.innerText ="DRAW"
        }
 
        gameWinner.classList.toggle('hidden');
-       gameDiv.classList.toogle('show-winner');
+       game.classList.toogle('show-winner');
        
 
     },5000);
 
     
 }
+function updateScore(point){
+    score =+point
+    scoreNum.innerText = score;
+
+}
 
 function isWinner(results) {
     return results[0].beats === results[1].name;
   }
+
+
 
 
     
