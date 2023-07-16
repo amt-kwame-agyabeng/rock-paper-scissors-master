@@ -12,11 +12,12 @@ const choices =[
       beats: "scissors"
   },
 ]
+
+
 const choiceButtons = document.querySelectorAll('.pick-btn')
 const choiceDiv = document.querySelector('.player-choice')
 const game = document.querySelector('.game')
 const gamePick = document.querySelectorAll('.game_pick')
-
 const gameWinner = document.querySelector('.game_winner')
 const gameWinnerText = document.querySelector('.game_text')
 const scoreNum = document.querySelector('#score-num')
@@ -55,10 +56,10 @@ function displayResults(results){
           <div class = "choice ${results[idx].name}">
           <img src = "images/icon-${results[idx].name}.svg" >
           </div>
-          `
+          `;
 
 
-      }, idx*3000)
+      }, idx*3000);
   
   });
   
@@ -71,37 +72,56 @@ function displayWinner(results){
      const userWins = isWinner(results) 
      const computerWins = isWinner(results.reverse())
      if (userWins) {
-      gameWinnerText.innerText ="YOU WIN";
+      gameWinnerText.innerText ="YOU WIN"
       gamePick[0].classList.toggle('winner')
       updateScore(1)
      }else if(computerWins){
-      gameWinnerText.innerText ="YOU LOSE";
+      gameWinnerText.innerText ="YOU LOSE"
       gamePick[1].classList.toggle('winner')
+      playAgain.innertext
+      playAgain.style.color = '#DB2E4D';
+      
      updateScore(-1) 
      }else{
-      gameWinnerText.innerText = "DRAW";
+      gameWinnerText.innerText = "DRAW"
      }
      gameWinner.classList.toggle('hidden');
-     game.classList.toogle('show_winner');
+     game.classList.toogle('show-winner');
 
-  },5000);
-
- 
-  
+  }, 5000);
 
   
-}
-function updateScore(point){
-  score =+point
-  scoreNum.innerText = score;
-
 }
 
 function isWinner(results) {
   return results[0].beats === results[1].name;
 }
 
+function updateScore(point){
+  score += point
+  scoreNum.innerText = score;
 
+}
+
+
+
+//Restart Game
+playAgain.addEventListener('click', () => {
+  choiceDiv.classList.toggle('hidden');
+  game.classList.toggle('hidden');
+
+  gamePick.forEach((resultDiv) => {
+    resultDiv.innerHTML = "";
+    resultDiv.classList.remove('winner');
+  });
+
+  gameWinnerText.innerText = "";
+  gameWinner.classList.toggle('hidden');
+  game.classList.toggle('show-winner');
+});
+
+
+  
 
 
   
