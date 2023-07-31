@@ -1,4 +1,4 @@
-@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+@import url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
 *{
     padding: 0;
     margin: 0;
@@ -70,8 +70,6 @@ body{
     background: url('/images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-position: center;
-    width: 476px;
-    height: 430px;
     position: relative;
     display: grid;
     place-items: center;
@@ -82,70 +80,34 @@ body{
     margin-top: 60px;
     gap: 40px;
 }
-.pick-btn{
-    border-radius: 50%;
-    outline: none;
-    background: none;
-    border-style: none;
-    
- }
-
-.pick-btn[data-choice = "paper"]{
-    grid-area: paper;
-}
-
-.pick-btn[data-choice = "scissors"]{
-    grid-area: scissors;
-}
-.pick-btn[data-choice = "rock"]{
-    grid-area: rock;
-}
-
-
-
 .choice img{
     width: 68px;
     height: 80px;
     transform: rotate(-4deg);
-  
-        
+}   
+.choice::before{
+    content: "";
+    width: 152px;
+    height: 144px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+    position: absolute;
+    box-shadow: inset 0px 8px 2px hsl(228, 23%, 78%);
+    cursor: pointer;
 }
+
 
 .choice{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 152px;
-    height: 144px;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
-    
-      
-}
-.choice:before{
-    content: '';
-    width: 152px;
-    height: 144px;
-    border-radius: 50%;
-    box-shadow: inset  0px 8px 2px hsl(228, 23%, 78%);
-    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
-    position: absolute;
    
-   
-    
+  
 }
 
-.choice::before {
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out;
-  }
-.pick-btn:focus  {
-    opacity: 1;
-    box-shadow: 0 0 0 32px rgba(255, 255, 255, 0.05);
-   
-    
-  }
 
 
 .choice.paper{
@@ -167,8 +129,14 @@ body{
     height:194px;
     background: linear-gradient( hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     box-shadow:  0px 6px 0px 0px hsl(347, 75%, 35%);
+    grid-area: rock;
 }
 
+.choice:focus{
+    opacity: 1;
+    box-shadow: 0 0 0 32px rgba(255, 255, 255, 0.05);
+    transition: opacity 0.4s ease-out;
+}
 
 
 
@@ -217,85 +185,42 @@ body{
     color: hsl(228, 45%, 44%); 
     bottom: 0;
 }
+
+
+
 .game{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+   display: flex;
+   justify-content: center;
+   gap: 70px;
+   place-items: center;
+   
     
 }
-
 
 .game_heading{
     font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
     color: #FFFFFF;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    font-weight: 700;
     text-align: center;
+    margin-top: 70px;
    
-}
-.game.pick-con{
-    display: flex;
-    justify-content: center;
 }
 
-.game_winner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 90px;
-   
-}
-.winner{
-    box-shadow: 0 0 0 40px rgba(255, 255, 255,0.05), 0 0 0 80px rgba(255, 255, 255,0.05), 0 0 0 130px rgba(255, 255, 255,0.05);
-    animation: winner 1s ease-in-out;
-   
-  }
-  
-  @keyframes winner {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
 .game_pick{
     width: 200px;
     height: 200px;
-    background: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-     
-}
-.game_text{
-    color: #FFF;
-    text-align: center;
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 700;
-
-
-}
-.play-again{
-    width: 220px;
-    height: 48px;
-    border-radius: 8px;
-    border-style: none;
-    color: #3B4262;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 2.5px;
-    margin-top: 5px;
-    
+    background: rgba(255, 255, 255, 0.05);
+    margin-top: 40px;
 }
 
-
-
+.game_winner{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .modal {
     position: fixed;
@@ -327,11 +252,10 @@ body{
     padding: 30px;
     line-height: 32px;
     color: #3B4262;
+    
+   
 }
-.img-con{
-    display: grid;
-    justify-content: center;
-}
+
 .close-button{
     cursor: pointer;
 }
@@ -345,8 +269,49 @@ body{
     display: none;
 }
 
+.img-con{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
 
+#game_text{
+   font-size: 56px;
+   color: white;
+   font-weight: 700;
+   text-align: center;
+   font-style: normal;
+   font-family:'Barlow Semi Condensed', sans-serif;
+   padding-bottom: 5px;
+}
 
+.play-again{
+    color: #3B4262;
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.5px;
+    border-style: none;
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    
+}
+.winner{
+    box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.05), 0 0 0 80px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.05);
+    animation: winner ease-in-out;
+}
+
+@keyframes winner {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 
 
@@ -430,9 +395,7 @@ body{
         width: 100%;
         margin: auto;
     
-        
-        
-       
+          
     }
     .modal-content{
         width: 100%;
@@ -443,34 +406,41 @@ body{
     .modal_heading{
         display: flex;
         flex-direction: column;
-        place-items: center; 
-        margin-top: 70px;  
+        place-items: center;
+        margin-top: 50px;
         margin-bottom: 50px;
+    
+        
        
      
     }
+    .game{
+        gap: 50px;
+       
+      
+        
+    }
+   
     
     .game_pick{
         width: 130px;
         height: 130px;
-        margin-left: 10px;
-       
+        margin-top: 30px;
+    
         
     }
     .game_heading{
         font-size: 15px;
         font-weight: 700;
         line-height: 32px;
-        margin-bottom: 10px;
+        margin-top: 20px;
         position: relative;
-        top: 200px;
-       
+        top: 220px;
         
-    
     }
     .game_winner{
        position: absolute;
-       top:350px;
+       top: 350px;  
     }
     
     .close-button{

@@ -20,35 +20,27 @@
 </div>
 <div class="game-box">
 <section class="player-choice">
-<button class="pick-btn" data-choice="paper">
-<div class="choice paper"><img src="/images/icon-paper.svg" alt="paper" ></div>
-</button>
-<button class="pick-btn" data-choice="scissors">
-<div class="choice scissors"><img src="/images/icon-scissors.svg" alt="scissors"></div>
-</button>
-<button class="pick-btn" data-choice="rock">
-<div class="choice rock"><img src="/images/icon-rock.svg" alt="rock"></div>
-</button>
+<div class="choice paper" tabindex="1" data-choice="paper"><img src="/images/icon-paper.svg" alt="paper" class="oval"></div>
+<div class="choice scissors" tabindex="1" data-choice="scissors"><img  src="/images/icon-scissors.svg" alt="scissors"></div>
+<div class="choice rock" tabindex="1" data-choice="rock"><img src="/images/icon-rock.svg" alt="rock"></div>
 </section>
 </div>
-<div class="game hidden">
-  <div class="user-pick">
-  <h2 class="game_heading">YOU PICKED</h2>
-  <div class="pick-con">
-  <div class="game_pick"></div>
-</div>
-</div>
-  <div class="game_winner hidden">
-   <h2 class="game_text"></h2>
-    <button class="play-again">PLAY AGAIN</button>
-  </div>
-  <div class="computer-pick">
-  <h2 class="game_heading">THE HOUSE PICKED</h2>
-  <div class="pick-con">
-  <div class="game_pick"></div>
- </div>
 </div>
  </div> 
+<section class="game hidden">
+<div class="user-pick">
+<div class="game_heading"><p>YOU PICKED</p></div>
+<div class="game_pick"></div>
+</div>
+<div class="game_winner hidden">
+<p id="game_text"></p>
+<button class="play-again">PLAY AGAIN</button>
+</div>
+<div class="com-pick">
+<div class="game_heading"><p>THE HOUSE PICKED</p></div>
+<div class="game_pick"></div>
+</div>
+</section>
 <div class="btn">
 <button class="rulesBtn">RULES</button>
 </div>
@@ -58,7 +50,7 @@
 <h2>RULES</h2>
 <div><img src="/images/icon-close.svg" alt="icon-close" class="close-button"></div>
 </div>
-<div class="img-con"><img class="image-rules" src="/images/image-rules.svg" alt="image-rules"></div>
+<div class="img-con"><img src="/images/image-rules.svg" alt="image-rules"></div>
 </div>
 </div>
 <footer>
