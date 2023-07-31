@@ -169,7 +169,7 @@ body{
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
- 
+
 }
 
 
@@ -415,12 +415,10 @@ body{
      
     }
   
-   
-    
     .game_pick{
         width: 130px;
         height: 130px;
-        margin-top: 30px;
+        margin-top: 10px;
     
         
     }
@@ -435,7 +433,7 @@ body{
     }
     .game_winner{
        position: absolute;
-       top: 350px;
+       top: 335px;
        margin-bottom: 10px;  
     }
     
