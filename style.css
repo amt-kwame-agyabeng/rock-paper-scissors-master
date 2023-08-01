@@ -408,33 +408,33 @@ body{
         flex-direction: column;
         place-items: center;
         margin-top: 50px;
-        margin-bottom: 50px;
-    
-        
-       
+        margin-bottom: 50px; 
      
     }
+    .game{
+        margin-top: 20px;
+    }
+
   
     .game_pick{
         width: 130px;
         height: 130px;
-        margin-top: 10px;
+      
     
-        
     }
     .game_heading{
         font-size: 15px;
         font-weight: 700;
         line-height: 32px;
-        margin-top: 20px;
+        margin-top: 2px;
         position: relative;
         top: 220px;
         
     }
     .game_winner{
        position: absolute;
-       top: 335px;
-       margin-bottom: 10px;  
+       top: 350px;
+         
     }
     
     .close-button{
