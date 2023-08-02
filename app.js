@@ -1,3 +1,4 @@
+//DOM
 const choiceDiv = document.querySelector('.player-choice')
 const choices = document.querySelectorAll('.choice')
 const game = document.querySelector('.game')
@@ -101,9 +102,9 @@ playAgain.addEventListener('click', () => {
   choiceDiv.classList.toggle('hidden');
   game.classList.toggle('hidden');
 
-  gameResults.forEach((resultDiv) => {
-    resultDiv.innerHTML = "";
-    resultDiv.classList.remove('winner');
+  gameResults.forEach((game) => {
+    game.innerHTML = "";
+    game.classList.remove('winner');
   });
 
   gameWinnerText.innerText = "";
