@@ -11,7 +11,8 @@
 <body>
 <div class="wrapper">
 <div class="container">
-<img id="logo" src="/images/logo.svg" alt="game-logo">
+<img class="logo" src="/images/logo.svg" alt="game-logo">
+<img class="logo-bonus hidden" src="/images/logo-bonus.svg" alt="logo">
 <div class="scoreboard">
 <p id="score">SCORE</p>
 <h1 id="score-num">0</h1>
@@ -20,9 +21,16 @@
 </div>
 <div class="game-box">
 <section class="player-choice">
-<div class="choice paper" tabindex="1" data-choice="paper"><img src="/images/icon-paper.svg" alt="paper" class="oval"></div>
+<div class="choice paper" tabindex="1" data-choice="paper"><img src="/images/icon-paper.svg" alt="paper"></div>
 <div class="choice scissors" tabindex="1" data-choice="scissors"><img src="/images/icon-scissors.svg" alt="scissors"></div>
 <div class="choice rock" tabindex="1" data-choice="rock"><img src="/images/icon-rock.svg" alt="rock"></div>
+</section>
+<section class="bonus-game hidden">
+  <div class="choice paper" tabindex="1" data-choice="paper"><img src="/images/icon-paper.svg" alt="paper"></div>
+  <div class="choice scissors" tabindex="1" data-choice="scissors"><img src="/images/icon-scissors.svg" alt="scissors"></div>
+  <div class="choice rock" tabindex="1" data-choice="rock"><img src="/images/icon-rock.svg" alt="rock"></div>
+  <div class="choice spock" tabindex="1" data-choice="spock"><img src="/images/icon-spock.svg" alt="spock"></div>
+  <div class="choice lizard" tabindex="1" data-choice="lizard"><img src="/images/icon-lizard.svg" alt="lizard"></div>
 </section>
 </div>
 </div>
@@ -42,6 +50,7 @@
 </div>
 </section>
 <div class="btn">
+<button class="bonus-btn">BONUS</button>
 <button class="rulesBtn">RULES</button>
 </div>
 <div class="modal">
@@ -51,6 +60,7 @@
 <div><img src="/images/icon-close.svg" alt="icon-close" class="close-button"></div>
 </div>
 <div class="img-con"><img src="/images/image-rules.svg" alt="image-rules"></div>
+<div class="img-con hidden"><img src="/images/image-rules.svg" alt="image-rules"></div>
 </div>
 </div>
 <footer>
@@ -60,6 +70,6 @@
   
   </div>
 </footer>
-
++
 </body>
 </html>

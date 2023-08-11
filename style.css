@@ -22,8 +22,13 @@ body{
 
 }
 
-#logo{
+.logo{
     margin-left: 30px;
+}
+.logo-bonus{
+    margin-left: 30px; 
+    width: 111px;
+    height: 110px;
 }
 .container{
     width: 700px;
@@ -80,6 +85,7 @@ body{
     margin-top: 60px;
     gap: 40px;
 }
+
 .choice img{
     width: 68px;
     height: 80px;
@@ -103,8 +109,7 @@ body{
     justify-content: center;
     border-radius: 50%;
     position: relative;
-    cursor: pointer;
-   
+    cursor: pointer;  
   
 }
 
@@ -131,7 +136,64 @@ body{
     box-shadow:  0px 6px 0px 0px hsl(347, 75%, 35%);
     grid-area: rock;
 }
+.choice.spock{
+    width:198px;
+    height: 194px;
+    background: linear-gradient(hsl(189, 59%, 53%),  hsl(189, 58%, 57%));
+    box-shadow: 0px 6px 0px 0px #2D8DAB;
+    
 
+}
+.choice.lizard{
+    width:198px;
+    height:194px;
+    background: linear-gradient( hsl(261, 73%, 60%),hsl(261, 72%, 63%));
+    box-shadow: 0px 6px 0px 0px hsl(261, 51%, 44%);
+
+}
+
+
+.bonus-game .choice.paper{
+    width: 145px;
+    height: 141px;
+    top:-50px;
+    left: 70px;
+   
+   
+}
+.bonus-game .choice.scissors{
+    width: 145px;
+    height: 141px;
+    grid-area: scissors;
+    top: -30px;
+}
+.bonus-game .choice.rock{
+    width: 145px;
+    height: 141px;
+    grid-area: rock;
+    top: -20px;
+    left: 30px;
+}
+.bonus-game .choice.spock{
+    width:145px;
+    height: 141px;
+    background: linear-gradient(hsl(189, 59%, 53%),  hsl(189, 58%, 57%));
+    box-shadow: 0px 6px 0px 0px hsl(194, 58%, 42%);
+    grid-area: spock;
+    top:-50px;
+    left: -60px;
+   
+}
+
+.bonus-game .choice.lizard{
+    width:145px;
+    height:141px;
+    background: linear-gradient(hsl(261, 73%, 60%),  hsl(261, 72%, 63%));
+    box-shadow: 0px 6px 0px 0px hsl(261, 51%, 44%);
+    grid-area: lizard;
+    top: -20px;
+
+}
 .choice:focus{
     opacity: 1;
     box-shadow: 0 0 0 32px rgba(255, 255, 255, 0.05);
@@ -165,13 +227,30 @@ body{
       
 
 }
+.bonus-btn{
+    width: 128px;
+    height: 40px;
+    border: 1px solid  hsl(217, 16%, 45%);
+    border-radius: 8px;
+    background: none;
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 19.2px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    cursor: pointer; 
+}
+
 .btn{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-right: 50px;
+  margin-left: 50px;
   margin-top: 20px;
 
- 
 }
 
 
@@ -195,8 +274,39 @@ body{
    justify-content: center;
    gap: 50px;
    place-items: center;
+      
+}
+.bonus-game{
+    background: url('/images/bg-pentagon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-template-columns: (repeat(3, 1fr));
+    grid-template-areas: 
+    "scissors scissors"
+    "spock paper"
+    "lizard rock";
+    display: grid;
+    place-items: center;
+    width:345px; 
+    height: 345px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+ 
+.bonus-game .choice::before{
+    content: " ";
+    width: 111px;
+    height: 104px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+    position: absolute;
+    box-shadow: inset 0px 8px 2px hsl(228, 23%, 78%);
+    cursor: pointer;
    
-    
+}
+.bonus-game img{
+    width: 43px;
+    height: 58px;
 }
 
 .game_heading{
@@ -324,9 +434,13 @@ body{
 @media screen and (min-width: 320px) and (max-width: 480px){
 
 
-    #logo{
+    .logo{
         width: 30%;
         margin-left: 20px;
+    }
+    .logo-bonus{
+        width: 48px;
+        height: 48px;
     }
     
     .wrapper{
@@ -348,7 +462,6 @@ body{
     
     }
     #score{
-       
         font-style: normal;
         font-weight: 600;
         font-size: 10px;
@@ -365,7 +478,10 @@ body{
         height: 281px;
         background-size: 166px 187px;
         gap: 20px;
+       
     }
+    
+    
     .choice img{
         width: 48px;
         height: 56px;
@@ -373,34 +489,89 @@ body{
     
     }
     .choice::before{
-        width: 100px;
+        width: 99px;
         height: 100px;
     } 
     .choice.paper{
-        width: 130px;
-        height: 133px;
+        width: 129px;
+        height: 126px;
     }
     .choice.scissors{
-        width: 130px;
-        height: 133px;
+        width: 129px;
+        height: 126px;
     }
     .choice.rock{
-        width: 130px;
-        height: 133px;
+        width: 129px;
+        height: 126px;
     }
+    .bonus-game{
+      background-size: 227px;
+      margin-top: 40px;
+    }
+    .bonus-game .choice::before{
+        width: 73px; 
+        height: 68px;
     
+    }
+    .bonus-game .choice.paper{
+        width: 92px;
+        height: 92px;
+        top: -30px;
+        left: 10px;
+
+    }
+    .bonus-game .choice.scissors{
+        width: 96px;
+        height: 92px;
+        top: 10px;
+    }
+    .bonus-game .choice.rock{
+        width: 96px;
+        height: 92px;
+        left: -10px;
+    }
+    .bonus-game .choice.spock{
+        width: 96px;
+        height: 92px;
+        left: -10px;
+        top: -20px;
+
+
+    }
+    .choice.spock{
+        width: 129px;
+        height: 126px;
+    }
+    .choice.lizard{
+        width: 129px;
+        height: 126px;
+
+
+    }
+    .bonus-game .choice.lizard{
+        width: 96px;
+        height: 92px;
+        left: 30px;
+        top: -20px;
+    }
+    .bonus-game img{
+        width: 29px;
+        height: 38px;
+    }
     
     .btn{
      position: absolute;
      bottom: 2rem;
-     justify-content: center;
-     width: 100%;
-           
+     display: flex;
+     place-items: center;
+     gap: 20px;
+    
     }
     .modal-content{
         width: 100%;
         height: 100%;
         border-radius: 0;
+
     }
     
     .modal_heading{
