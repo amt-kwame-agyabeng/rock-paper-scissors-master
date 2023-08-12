@@ -11,6 +11,11 @@ const bonus = document.querySelector('.bonus-btn')
 const bonusGame = document.querySelector('.logo-bonus')
 const logo = document.querySelector('.logo')
 const gameBonus = document.querySelector('.bonus-game')
+const modal = document.querySelector('.modal');
+const rulesBtn = document.querySelector('.rulesBtn');
+const rulesNormal = document.querySelector('.img-con')
+const rulesBonus = document.querySelector('.img-bonus')
+const closeButton = document.querySelector('.close-button')
 
 let score = 0;
 let bonusMode = false;
@@ -160,7 +165,7 @@ function displayWinnerBonus(results){
     }
 
     gameWinner.classList.toggle('hidden');
-    game.classList.toggle('show-winnner')
+    game.classList.toggle('show-winnner');
   }, 5000);
 
 
@@ -239,18 +244,30 @@ playAgain.addEventListener('click', () => {
   
 });
 
+//Hide or show rules modal
+function toggleModal(){
+  modal.classList.toggle("show-modal");
 
+}
+rulesBtn.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+
+
+
+//Bonus
 bonus.addEventListener("click",() =>{
   resetScores ();
 
   bonusMode = !bonusMode;
 
-
-
   bonusGame.classList.toggle('hidden');
   logo.classList.toggle('hidden');
-
   
+  rulesNormal.classList.toggle('hidden')
+  rulesBonus.classList.toggle('hidden')
+  
+  
+   
   gameResults.forEach((game) => {
     game.innerHTML = "";
     game.classList.remove('winner');
@@ -276,17 +293,8 @@ bonus.addEventListener("click",() =>{
 });
 
 
-  const modal = document.querySelector(".modal");
-  const rules = document.querySelector(".rulesBtn");
-  const closeButton = document.querySelector(".close-button");
   
-  //Hide or show rules modal
-  function toggleModal(){
-      modal.classList.toggle("show-modal");
-  }
   
-  rules.addEventListener("click", toggleModal);
-  closeButton.addEventListener("click", toggleModal);
 
-
+ 
 
